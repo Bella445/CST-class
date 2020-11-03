@@ -1,0 +1,17 @@
+#coding gbk
+floor=input("请输入您想达到的楼层数:")
+#假设该建筑共有-3到20楼
+
+if floor.isdigit():#判断用户输入的是否是整数
+    floor=int(floor)
+    if -4 < floor < 14:#如果楼层在-3到13层之间
+        print(floor)#直接输出楼层
+    elif 14 < floor < 18:#如果楼层在14到16层之间
+        print(floor - 1)#输出用户输入的数字-1
+    elif 18 < floor < 23:#如果楼层在17到20层之间
+        print(floor - 2)#输出用户输入的数字-2
+    else:
+        print("error,请输入-3到22之间非14和18的整数，谢谢！")#否则报错，解决用户输入的数字不在以上范围的问题
+
+else:
+    print("error,请输入整数")#提醒用户输入整数
